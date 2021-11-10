@@ -157,7 +157,8 @@ ar71xx_setup_interfaces()
 		ucidef_set_interface_lan "eth0"
 		;;
  	tl-wr802n-v1)
-   		ucidef_set_interface_lan_wan "eth1" "eth0"
+   		ucidef_set_interface_wan "eth0"
+		ucidef_set_interface_lan "eth1"
     		;;
 	a40|\
 	a60|\
