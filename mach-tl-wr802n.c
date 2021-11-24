@@ -95,6 +95,10 @@ static void __init tl_ap143_setup(void)
 
   ath79_init_mac(tmpmac, mac, 0);
   ath79_register_wmac(ee, tmpmac);
+	
+	ath79_register_gpio_keys_polled(1, TL_WR802N_KEYS_POLL_INTERVAL,
+					ARRAY_SIZE(tl_wr802n_gpio_keys),
+					tl_wr802n_gpio_keys);
 
 
 }
